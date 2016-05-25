@@ -1,0 +1,29 @@
+<%= form_tag('/send_sms', method: 'POST') do %>
+  <div class="ui center aligned container">
+
+    <h1 class="ui center aligned icon header teal">
+      <i class="circular users icon"></i>
+    Send your friend a text message!
+  </h1>
+
+    <div class="ui massive fluid left corner labeled input teal">
+      <input type="text" placeholder="Enter their phone number..." name="number">
+      <div class="ui left corner label">
+        <i class="text telephone icon teal"></i>
+      </div>
+    </div>
+
+  </br>
+  </br>
+
+    <div class="ui massive action fluid left corner labeled input teal">
+      <input type="text" placeholder="Send your friend a funny message!" name="message">
+      <button class="ui button teal" type="submit" name="btn1">SEND</button>
+    </div>
+
+  </div>
+
+
+
+  </div>
+  <% end %>
