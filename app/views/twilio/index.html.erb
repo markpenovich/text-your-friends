@@ -1,4 +1,17 @@
+
+
 <%= form_tag('/send_sms', method: 'POST') do %>
+
+<% if notice %>
+  <div id="notice_wrapper">
+    <p class="notice"><%= notice %></p>
+  </div>
+<% elsif alert %>
+  <div id="alert_wrapper">
+    <p class="alert"><%= alert %></p>
+  </div>
+<% end %>
+
   <div class="ui center aligned container">
 
     <h1 class="ui center aligned icon header teal">
@@ -26,4 +39,26 @@
 
 
   </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#notice_wrapper').hide();
+	      $('#notice_wrapper').fadeIn("slow",function(){
+	       });
+      setTimeout(function(){
+        $('#notice_wrapper').fadeOut("slow", function() {
+          $(this).remove();
+        })
+      }, 4500)
+
+      $('#alert_wrapper').hide();
+	      $('#alert_wrapper').fadeIn("slow",function(){
+	       });
+      setTimeout(function(){
+        $('#alert_wrapper').fadeOut("slow", function() {
+          $(this).remove();
+        })
+      }, 4500)
+    });
+  </script>
   <% end %>

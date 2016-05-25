@@ -1,3 +1,24 @@
 // Place all the styles related to the twilio controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0, 181, 173, 0.7);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#alert_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(253, 47, 36, 0.7);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
