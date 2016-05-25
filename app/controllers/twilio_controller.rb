@@ -7,10 +7,10 @@ class TwilioController < ApplicationController
 
 
 
-    @client = Text::REST::Client.new account_sid, auth_token
+    @client = Twilio::REST::Client.new account_sid, auth_token
 
     @message = @client.account.messages.create({:to => "+1"+"#{number}",
-                                      :from => "c",
+                                      :from => "+16303435135",
                                       :body => "#{message}"})
 
       redirect_to '/'
