@@ -18,7 +18,7 @@ class TwilioController < ApplicationController
       flash[:notice] = "Message sent!"
       redirect_to '/'
     rescue
-      flash[:alert] = "Please enter in a valid phone number and message then try again!"
+      flash[:ayy] = "Please enter a valid phone number and message then try again."
       redirect_to '/'
     end
   end
